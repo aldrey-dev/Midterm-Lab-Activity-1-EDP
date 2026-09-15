@@ -21,8 +21,7 @@ const INITIAL = {
   program: 'BS Information Technology',
   year: '3rd Year',
   statusText: 'Active',
-  statusValue: 'active',
-  studentId: '2026-001'
+  statusValue: 'active'
 };
 
 function isValidStudentName(name) {
@@ -79,7 +78,7 @@ function resetProfile() {
   profileYear.textContent = INITIAL.year;
   profileStatus.textContent = INITIAL.statusText;
   studentIdDisplay.textContent = `Student ID: ${profileCard.dataset.studentId}`;
-  nameInput.value = INITIAL.name;
+  nameInput.value = '';
   programInput.value = INITIAL.program;
   yearInput.value = INITIAL.year;
   statusInput.value = INITIAL.statusValue;
