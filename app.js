@@ -78,7 +78,7 @@ function resetProfile() {
   profileYear.textContent = INITIAL.year;
   profileStatus.textContent = INITIAL.statusText;
   studentIdDisplay.textContent = `Student ID: ${profileCard.dataset.studentId}`;
-  nameInput.value = '';
+  nameInput.value = INITIAL.name;
   programInput.value = INITIAL.program;
   yearInput.value = INITIAL.year;
   statusInput.value = INITIAL.statusValue;
