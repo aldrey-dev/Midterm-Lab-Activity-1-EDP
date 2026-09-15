@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Student Profile Controller</title>
+  <title>Student Profile Controller</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,20 +20,15 @@
     </div>
   </article>
 
-  <div class="controls">
-    <h3>Update Profile</h3>
-
-    <label for="nameInput">Name:</label>
+  <section class="controls">
     <input type="text" id="nameInput" placeholder="Enter student name">
 
-    <label for="programInput">Program:</label>
     <select id="programInput">
       <option value="BS Information Technology" selected>BS Information Technology</option>
       <option value="BS Computer Science">BS Computer Science</option>
       <option value="BS Information Systems">BS Information Systems</option>
     </select>
 
-    <label for="yearInput">Year Level:</label>
     <select id="yearInput">
       <option value="1st Year">1st Year</option>
       <option value="2nd Year">2nd Year</option>
@@ -41,19 +36,20 @@
       <option value="4th Year">4th Year</option>
     </select>
 
-    <label for="statusInput">Status:</label>
     <select id="statusInput">
-      <option value="active" selected>active</option>
-      <option value="inactive">inactive</option>
+      <option value="active" selected>Active</option>
+      <option value="inactive">Inactive</option>
     </select>
-    
-    <div id="formMessage"></div>
 
-    <button id="updateBtn">Update Profile</button>
-    <button id="toggleDetailsBtn">Toggle Details</button>
-    <button id="themeBtn">Toggle Theme</button>
-    <button id="resetBtn">Reset</button>
-  </div>
+    <div class="buttons">
+      <button id="updateBtn">Update Profile</button>
+      <button id="toggleDetailsBtn">Toggle Details</button>
+      <button id="themeBtn">Toggle Theme</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <p id="formMessage"></p>
+  </section>
 
   <script src="js/app.js" defer></script>
 </body>

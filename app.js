@@ -37,7 +37,6 @@ function setStatus(status) {
   if (!profileStatus || !profileCard) return;
   profileStatus.textContent = formatStudentStatus(status);
   profileCard.dataset.status = status;
-  
   if (status === 'active') {
     profileCard.classList.remove('inactive');
     profileCard.classList.add('active');
@@ -50,17 +49,14 @@ function setStatus(status) {
 function updateProfile() {
   if (!profileName || !profileProgram || !profileYear || !formMessage) return;
   formMessage.textContent = '';
-
   const newName = nameInput.value;
   const newProgram = programInput.value;
   const newYear = yearInput.value;
   const newStatus = statusInput.value;
-
   if (!isValidStudentName(newName)) {
     formMessage.textContent = 'Student name is required';
     return;
   }
-
   profileName.textContent = newName.trim();
   profileProgram.textContent = newProgram;
   profileYear.textContent = newYear;
@@ -78,21 +74,17 @@ function toggleTheme() {
 
 function resetProfile() {
   if (!profileName || !profileProgram || !profileYear || !profileStatus) return;
-
   profileName.textContent = INITIAL.name;
   profileProgram.textContent = INITIAL.program;
   profileYear.textContent = INITIAL.year;
   profileStatus.textContent = INITIAL.statusText;
-  studentIdDisplay.textContent = `Student ID: ${INITIAL.studentId}`;
-
+  studentIdDisplay.textContent = `Student ID: ${profileCard.dataset.studentId}`;
   nameInput.value = INITIAL.name;
   programInput.value = INITIAL.program;
   yearInput.value = INITIAL.year;
   statusInput.value = INITIAL.statusValue;
-
   setStatus(INITIAL.statusValue);
-e
-  detailsPanel.classList.add('hidden'); 
+  detailsPanel.classList.remove('hidden');
   document.body.classList.remove('dark-theme');
   formMessage.textContent = '';
 }
@@ -102,4 +94,4 @@ toggleDetailsBtn.addEventListener('click', toggleDetails);
 themeBtn.addEventListener('click', toggleTheme);
 resetBtn.addEventListener('click', resetProfile);
 
-studentIdDisplay.textContent = `Student ID: ${INITIAL.studentId}`;
+studentIdDisplay.textContent = `Student ID: ${profileCard.dataset.studentId}`;
